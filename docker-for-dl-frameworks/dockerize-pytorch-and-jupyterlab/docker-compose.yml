@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  jupyterlab:
+    build:
+      context: ./docker/jupyterlab
+    container_name: jupyterlabinstance
+    volumes:
+      - ./data/:/project/data/
+      - ./models/:/project/models/
+      - ./notebooks/:/project/notebooks/
+    ports:
+      - '8888:8888'

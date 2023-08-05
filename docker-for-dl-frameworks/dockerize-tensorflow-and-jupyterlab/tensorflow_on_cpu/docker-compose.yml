@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+
+  jupyterlab:
+    build:
+      context: ./docker/jupyterlab
+    container_name: juputerlabinstance
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: ""
+    volumes:
+      - ./data/:/project/data/
+      - ./models/:/project/models/
+      - ./notebooks/:/project/notebooks/
+    ports:
+    - '8888:8888'
+    
+  fastapi:
+    build:
+      context: ./docker/fast-api
+    container_name: fastapiinstance
+    environment:
+      API_KEY: ""
+    volumes:
+    - ./apis:/code/app
+    - ./models:/code/app/models
+    ports:
+    - '8000:8000'

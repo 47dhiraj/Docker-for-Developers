@@ -1,0 +1,9 @@
+
+
+# How to run bash script file (i.e  .sh file) ?
+
+    SYNTAX: ==> sh filename.sh
+
+    eg: ==> sh docker_build.sh
+
+    eg: ==> sh run_compose.sh

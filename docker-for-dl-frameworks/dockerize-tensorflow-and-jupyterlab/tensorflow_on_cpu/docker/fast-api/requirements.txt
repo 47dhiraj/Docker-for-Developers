@@ -1,0 +1,9 @@
+fastapi
+sqlmodel
+uvicorn
+pydantic
+mysqlclient
+psycopg2
+alembic
+SQLAlchemy
+scikit-learn
